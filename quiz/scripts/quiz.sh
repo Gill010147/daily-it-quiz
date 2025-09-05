@@ -51,5 +51,5 @@ dur="$(( $(/usr/bin/date +%s) - start_ts ))"
 printf '{"ts":"%s","session_id":"%s","count":5,"correct":%d,"pass":%s,"duration_sec":%d}\n' "$ts" "$session_id" "$correct" "$pass" "$dur" >> "$SESS"
 
 echo ""
-echo "세션 결과: $correct/5 정답, 통과: $pass, 소요: ${dur}s"
+echo "테스트 결과: $correct/5 정답, 통과: $pass, 소요: ${dur}s"
 echo "로그 저장: $SESS, $ANS"chmod +x ~/quiz/scripts/quiz.sh
