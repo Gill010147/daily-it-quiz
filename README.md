@@ -58,7 +58,7 @@ Daily IT Quiz는 **TSV 기반 문제은행과 쉘스크립트**를 활용하여 
 
 > 프로젝트 주요 화면을 캡처해서 아래에 첨부
 
-![screenshot](./screenshot.png)
+![screenshot](./itquiz.png)
 
 ---
 
