@@ -1,0 +1,2 @@
+/home/ubuntu/quiz/scripts/daily_report.sh: line 10: /usr/bin/date +%F: syntax error: operand expected (error token is "/usr/bin/date +%F")
+/home/ubuntu/quiz/scripts/daily_report.sh: line 34: syntax error near unexpected token `|'

@@ -1,0 +1,100 @@
+101	linux	Ubuntu에서 숨김 파일까지 표시하는 ls 옵션은?	A)-l B)-h C)-a D)-R	C
+102	linux	pwd 명령의 역할은?	A) 권한 변경 B) 현재 경로 출력 C) 파일 삭제 D) 프로세스 보기	B
+103	linux	현재 디렉토리에 test.txt가 없을 때 0바이트 파일을 만드는 명령은?	A) touch test.txt B) cat > test.txt C) mkdir test.txt D) echo test.txt	A
+104	linux	rm -rf 명령의 의미로 올바른 것은?	A) 파일 복구 B) 강제 재부팅 C) 강제 재귀 삭제 D) 읽기 전용	C
+105	linux	현재 디렉토리에 있는 파일을 자세히 표시하는 명령은?	A) ls -al B) ls C) ll -h D) dir -a	A
+106	linux	파일 시스템 사용량을 사람이 읽기 좋은 단위로 출력하는 명령은?	A) df -h B) du -b C) free -m D) top -H	A
+107	linux	시스템 프로세스를 실시간으로 보는 명령은?	A) ps B) top C) kill D) jobs	B
+108	linux	환경변수 HOME 값을 출력하는 올바른 방법은?	A) HOME B) $HOME C) echo HOME D) $ echo HOME	B
+109	linux	현재 사용자 ID와 그룹을 확인하는 명령은?	A) id B) groups C) whoami D) useradd	A
+110	linux	파일 내용에서 문자열을 검색하는 명령은?	A) find B) awk C) grep D) sed	C
+111	shell	Bash에서 스크립트의 비상 중단을 위해 set -e의 의미는?	A) verbose B) 에러 시 종료 C) 포그라운드만 실행 D) PATH 출력	B
+112	shell	crontab에서 매일 7시 30분에 실행하려면?	A) 30 7 * * * B) 7 30 * * * C) 30 * 7 * * D) * * 7 30 *	A
+113	shell	cron에서 하루 3회 7:30,12:30,22:30은?	A) */3 * * * * B) 30 7,12,22 * * * C) 0 */3 * * * D) 30 3,6,9 * * *	B
+114	shell	표준출력과 표준에러를 같은 파일에 저장하려면?	A) >file 2>&1 B) 2>file C) >>file D) < file	A
+115	shell	awk에서 필드 구분자로 탭을 쓰려면?	A) FS=" " B) FS="," C) FS="\t" D) FS="|"	C
+116	git	Git에서 현재 브랜치와 상태를 요약 보는 명령은?	A) git log B) git status C) git branch D) git diff	B
+117	git	원격 저장소를 추가하는 명령은?	A) git add origin B) git remote add origin C) git push origin D) git clone origin	B
+118	git	스테이징된 변경을 커밋하는 명령은?	A) git stage B) git commit -m "msg" C) git add . -m D) git stash	B
+119	network	SSH 기본 포트는?	A) 20 B) 21 C) 22 D) 23	C
+120	network	로컬 루프백 주소는?	A) 0.0.0.0 B) 127.0.0.1 C) 255.255.255.255 D) 224.0.0.1	B
+121	network	ip addr에서 인터페이스 상태가 UP을 나타내는 키워드?	A) DOWN B) UNKNOWN C) LOWER_UP D) UP	D
+122	cs	LRU는 무엇의 교체 정책인가?	A) CPU 스케줄링 B) 페이지 교체 C) 디스크 배치 D) 네트워크 라우팅	B
+123	cs	프로세스 생성 시 부모-자식 복제에 관련된 시스템 콜은?	A) exec B) fork C) exit D) waitpid	B
+124	cs	뮤텍스의 목적은?	A) 네트워크 가속 B) 파일 압축 C) 임계구역 상호배제 D) GUI 렌더링	C
+125	aws	AWS EC2에 대한 올바른 설명은?	A) 객체 스토리지 B) 가상 서버 인스턴스 C) 메시지 큐 D) NoSQL DB	B
+126	aws	S3의 특징으로 맞는 것은?	A) 블록 스토리지 B) 파일 스토리지 C) 객체 스토리지 D) 캐시	C
+127	aws	EKS는 무엇의 관리형 서비스인가?	A) Docker Swarm B) Kubernetes C) Mesos D) Nomad	B
+128	vmware	ESXi는 무엇인가?	A) 하이퍼바이저 B) 로그수집기 C) 방화벽 D) 데이터베이스	A
+129	vmware	vCenter의 주요 역할은?	A) 호스트 OS B) 중앙 관리(클러스터/VM) C) 백업 툴 D) IDS	B
+130	vmware	vSAN의 스토리지 유형은?	A) 객체 스토리지 B) 파일 스토리지 C) 테이프 D) CD-ROM	A
+131	vmware	FTT(Failures To Tolerate) 1의 의미는?	A) 무가용 B) 1개 장애 허용 복제 C) 백업 주기 1일 D) RAID0	B
+132	vmware	스플릿 브레인 방지와 관련된 개념은?	A) 세마포어 B) 쿼럼/위트니스 C) TLB D) NUMA	B
+133	k8s	Kubernetes에서 Pod를 배포하는 기본 단위는?	A) Deployment B) Service C) ConfigMap D) Ingress	A
+134	k8s	Service의 ClusterIP 목적은?	A) 외부 공개 B) 내부 가상 IP 트래픽 라우팅 C) 로컬호스트만 D) 스토리지	B
+135	k8s	ConfigMap의 용도는?	A) 바이너리 보관 B) 설정값/텍스트 보관 C) 비밀키 보관 D) 로그 수집	B
+136	docker	Dockerfile에서 베이스 이미지를 지정하는 지시어는?	A) RUN B) FROM C) COPY D) ENTRYPOINT	B
+137	docker	컨테이너 목록을 보는 명령은?	A) docker ps B) docker images C) docker run D) docker logs	A
+138	docker	이미지 삭제 명령은?	A) docker rmi B) docker rm C) docker stop D) docker prune	A
+139	linux	systemctl로 서비스 재시작 명령은?	A) systemctl start B) systemctl stop C) systemctl restart D) service start	C
+140	linux	Ubuntu에서 패키지 설치 명령은?	A) yum install B) apt install C) dnf install D) pacman -S	B
+141	linux	시스템 타임존 확인 명령은?	A) date -T B) timedatectl status C) timectl -z D) tzstat	B
+142	linux	swap을 비활성화하는 명령은?	A) swapon -a B) swapoff --all C) free -s B D) sysctl -w swap=0	B
+143	linux	파일의 권한을 바꾸는 명령은?	A) chmod B) chown C) chgrp D) umask	A
+144	linux	파일의 소유자와 그룹을 바꾸는 명령은?	A) chmod B) chown C) ln D) tee	B
+145	shell	표준출력을 파일에 덮어쓰는 리다이렉션은?	A) >> B) > C) 2> D) <	B
+146	shell	Bash에서 엄격 모드 일부로 권장되는 조합은?	A) set -euo pipefail B) set +x C) set -e +o noglob D) shopt -s nullglob	A
+147	git	원격 최신 변경을 병합 없이 가져오는 명령은?	A) git pull --rebase B) git fetch C) git reset --hard D) git revert	B
+148	network	현재 머신의 네임 해석(호스트명/IP) 캐시 조회는?	A) ip link B) getent hosts C) host -l D) route print	B
+149	cs	문맥교환(context switch)의 직접적 원인은?	A) 디스크 조각 B) 프로세스 상태 전환(스케줄링) C) 파일 잠금 D) 네트워크 혼잡	B
+150	vmware	vSAN iSCSI 타깃의 주 사용 사례는?	A) VMkernel 부팅 B) 외부 호스트의 블록 접근 제공 C) 오브젝트 삭제 D) FT 비활성화	B
+151	linux	Ubuntu 버전 상세 정보 확인 명령은?	A) uname -v B) lsb_release -a C) cat /proc/cpuinfo D) who	B
+152	linux	HOME 변수를 올바르게 출력하는 명령은?	A) echo HOME B) $HOME C) echo $HOME D) HOME	C
+153	linux	vi에서 생성된 .swp 파일로 편집이 막힐 때 조치?	A) chmod 777 B) rm 해당 .swp C) reboot D) fsck	B
+154	linux	Nginx 버전 확인은?	A) nginx --ver B) nginx -version C) nginx -v D) nginx version	C
+155	aws	CloudWatch의 주요 기능은?	A) 알림/로그/지표 수집 B) ARP 캐시 C) 컨테이너 런타임 D) 객체 암호화	A
+156	k8s	노드 리소스 부족 시 파드 축출 정책 관련 용어는?	A) Affinity B) Taint/Toleration C) DaemonSet D) HPA	B
+157	docker	루트 없이 docker 명령 사용을 위한 조치는?	A) sudo 매번 사용 B) docker 그룹에 사용자 추가 C) root 비활성화 D) PATH 변경	B
+158	git	Git에서 변경 파일 목록과 줄 단위 차이 확인 명령은?	A) git show B) git diff C) git blame D) git bisect	B
+159	network	현재 열려 있는 TCP/UDP 포트 확인 명령 중 하나는?	A) ss -tulpen B) free -h C) uname -r D) last	A
+160	cs	세마포어(semaphore)의 주 목적은?	A) 교착상태 감지 B) 프로세스 동기화/자원 카운팅 C) 네트워크 라우팅 D) 페이징	B
+161	vmware	vCenter에서 호스트·클러스터를 중앙집중식으로 관리하는 기능 묶음은?	A) DRS/HA/FT B) ARP/NAT C) CRUD D) TLS	A
+162	vmware	ESXi 로그를 외부 syslog로 전송하는 이유로 적절한 것은?	A) 로컬 로그 유실 방지/중앙 분석 B) 성능 저하 C) SSH 차단 D) API 제한	A
+163	vmware	vSAN 최소 호스트 수 권장값은?	A) 1 B) 2 C) 3 이상 D) 8	C
+164	k8s	Deployment 롤링 업데이트의 장점은?	A) 무중단 배포 B) 저장공간 절약 C) 로그 숨김 D) DNS 캐시	A
+165	docker	docker logs의 기본 대상은?	A) 컨테이너 표준출력/에러 B) /var/log/syslog C) 호스트 dmesg D) /root/logs	A
+166	linux	systemctl 명령으로 서비스 상태 확인은?	A) systemctl is-active B) systemctl enable C) systemctl mask D) systemctl preset	A
+167	shell	crontab에서 PATH 문제를 줄이는 방법은?	A) 상대경로 사용 B) 절대경로 사용 C) PATH 무시 D) alias 사용	B
+168	network	공인/사설 IP 구분에서 10.0.0.0/8은?	A) 공인 B) 사설 C) 멀티캐스트 D) 루프백	B
+169	cs	스레드와 프로세스의 차이로 옳은 것은?	A) 스레드는 메모리 공간을 분리함 B) 스레드는 프로세스 내 자원 공유 C) 스레드는 커널 없음 D) 동일	B
+170	aws	EBS의 특징은?	A) 객체 스토리지 B) 블록 스토리지 C) 파일 스토리지 D) 테이프	B
+171	vmware	FTT=1 RAID1 정책은 어떤 의미?	A) 스트라이핑만 B) 미러링 복제 1회 C) 패리티만 D) 트리플 미러	B
+172	vmware	RAID5/6 사용 제약으로 맞는 것은?	A) 최소 2호스트 B) All-Flash/노드 요건 C) 콘솔 모드 필요 D) vCenter 미사용	B
+173	k8s	Service 타입 중 외부 공개는?	A) ClusterIP B) NodePort/LoadBalancer C) EmptyDir D) CSI	B
+174	docker	Dockerfile에서 실행 명령(기본 프로세스) 설정은?	A) CMD/ENTRYPOINT B) FROM C) ARG D) ENV	A
+175	linux	파일 권한 rwxr-x---은 8진수로?	A) 750 B) 755 C) 700 D) 644	A
+176	shell	JSON Lines를 CSV로 변환하기 쉬운 도구는?	A) grep B) jq C) cut D) tee	B
+177	network	DNS 조회에 사용하는 명령으로 올바른 것은?	A) dig/host/nslookup B) iperf C) ping -R D) curl	A
+178	cs	페이지 폴트(Page Fault) 시 일반적 동작은?	A) 즉시 종료 B) 디스크에서 페이지 적재 C) CPU 교체 D) DNS 조회	B
+179	aws	EFS는 어떤 스토리지?	A) 블록 B) 파일(네트워크) C) 객체 D) 테이프	B
+180	git	Git에서 변경 되돌리기(이전 커밋 내용으로 파일 복원) 명령은?	A) git mv B) git restore C) git rebase D) git init	B
+181	linux	free -h에서 Swap이 0이 권장되는 이유(컨테이너/CI 환경)?	A) OOM 방지 B) 지연/불안정 피하려고 C) 보안강화 D) 네트워크 개선	B
+182	shell	awk에서 첫 번째 필드를 참조하는 표기는?	A) $1 B) $0 C) $NF D) NR	A
+183	linux	lsb_release -a는 무엇을 보여주는가?	A) 커널 로그 B) OS 상세 버전 정보 C) CPU 모델 D) 메모리 맵	B
+184	docker	docker exec -it 컨테이너 bash의 의미는?	A) 이미지 빌드 B) 컨테이너 내부 셸 접속 C) 로그 보기 D) 포트 개방	B
+185	k8s	kubectl get pods -A 의 의미는?	A) 현재 네임스페이스 B) 모든 네임스페이스 C) 시스템만 D) 사용자만	B
+186	vmware	ESXi에서 크론으로 성능 수집(esxtop batch)하는 이유는?	A) 장식 B) 정기 성능 분석/트렌드 C) 보안 강화를 위해 D) 라이센스 체크	B
+187	network	서버가 0.0.0.0:22 바인딩을 의미하는 것은?	A) 모든 인터페이스 수신 B) 루프백만 C) 막힘 D) 외부 차단	A
+188	cs	CPU 바운드 vs IO 바운드 중 대기 시간이 큰 유형은?	A) CPU 바운드 B) IO 바운드 C) 동일 D) 불명	B
+189	aws	EC2 보안그룹은?	A) 상태 비저장 B) 상태 저장 가상 방화벽 C) NACL만 D) 라우팅	B
+190	git	Git에서 원격 브랜치를 가져오되 병합하지 않는 명령은?	A) git fetch B) git pull C) git clone D) git tag	A
+191	linux	which 명령의 목적은?	A) 파일 찾기 B) 명령 실행 경로 확인 C) 권한 변경 D) 사용자 추가	B
+192	shell	cron에서 일요일을 지정하는 표현은?	A) 7 또는 0 B) 1 C) 6 D) 5	A
+193	network	ifconfig/ip 명령 중 현대 우분투에서 권장되는 것은?	A) ifconfig B) ip addr/ip a C) route D) arp	B
+194	docker	컨테이너 로그를 파일로 리다이렉션하는 일반적 방법은?	A) docker logs > file B) 컨테이너 내부 syslog C) 표준출력에 기록 D) journald 설정	C
+195	k8s	Pod에 설정을 주입하는 리소스는?	A) Secret/ConfigMap B) Service C) Ingress D) PV	A
+196	cs	스택과 힙에 대한 설명으로 옳은 것은?	A) 스택은 동적할당 B) 힙은 고정크기 C) 스택은 함수 호출 프레임 D) 힙은 콜스택	C
+197	vmware	vSphere HA의 목적은?	A) 수평확장 B) 호스트 장애 시 VM 자동 재시작 C) 로그 압축 D) 백업	B
+198	linux	/var/log/syslog의 용도는?	A) 시스템 일반 로그 B) 사용자 홈 C) 커널 이미지 D) 패키지 저장	A
+199	shell	awk에서 레코드 번호는?	A) NR B) NF C) RS D) FS	A
+200	aws	CloudWatch Alarm 임계치 초과 시 동작으로 적절한 것은?	A) S3 업로드 B) 알림/오토스케일 트리거 C) SSH 접속 제한 D) 서브넷 변경	B
