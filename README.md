@@ -23,14 +23,26 @@
   </tr>
 </table>
 
-## 📝 프로젝트 주제
-면접 대비의 필요성을 느꼈고, 이제까지 공부해온 지식을 복습하기 위해 제작한 CS 문제은행 서비스입니다.
+## 📝 프로젝트 주제 및 기능
+
+Daily IT Quiz는 **TSV 기반 문제은행과 쉘스크립트**를 활용하여 매일 랜덤한 문제들을 출력하고, 정답 여부를 체크하며 풀이 기록을 보관하는 시스템입니다. 학생 및 취업 준비생이 **CS 지식을 반복 학습**하는 데 적합하며, 특히 이번 하반기 공채 기술면접에 있어서 CS 지식을 복습하고 취약점을 확인할 때 바로 이용할 수 있습니다.
+
+하루 4회(08:30/12:30/17:30/22:30) 5문항 IT 퀴즈를 터미널에서 출제·채점하고, JSON Lines 로그를 jq+awk로 집계해 일/주간 리포트를 자동 생성하는 README 템플릿입니다.
+bash 스크립트, cron 스케줄링, jq+awk 로그 분석, Markdown 리포팅으로 구성되며 재현성과 자동화를 중요하게 생각해서 만들었습니다.
+
+- 인터랙티브 퀴즈 세션: TSV 문제은행에서 5문항 랜덤, 통과 임계치(기본 3/5, 환경변수로 조정) 지원.
+
+- 로그 축적: answers.log(문항 단위), sessions.log(세션 단위) JSONL 포맷으로 누적 기록.
+
+- 리포트 산출: daily/weekly 스크립트로 통과율, 평균 점수/시간, 카테고리별 정답률을 Markdown으로 저장.
+
+- 스케줄 자동화: cron으로 4회 퀴즈, 23:50 일일 리포트, 일요일 23:55 주간 리포트 자동 실행.
 
 ---
 
 ### ⚙ 사용 기술 및 도구 (Tech Stack & Tools)
 
-> **IDE / OS**: VS Code / Ubuntu 22.04 <br>
+> **IDE / OS**: VS Code / Ubuntu 22.04 / jq 1.7 <br>
 > **가상 환경**: VirtualBox (Linux VM 구동) <br>
 > **버전 관리**: Git / GitHub <br>
 > **협업**: Notion <br>
@@ -48,9 +60,15 @@ Daily-IT-Quiz/
 
 ## 📂 프로젝트 설명 (Project Description)
 
-Daily IT Quiz는 **TSV 기반 문제은행과 쉘스크립트**를 활용하여 매일 랜덤한 문제들을 출력하고, 정답 여부를 체크하며 풀이 기록을 보관하는 시스템입니다. 학생 및 취업 준비생이 **CS 지식을 반복 학습**하는 데 적합하며, 특히 이번 하반기 공채 기술면접에 있어서 CS 지식을 복습하고 취약점을 확인할 때 바로 이용할 수 있습니다.<br>
-하루에 3번, 문제은행(bank.tsv)에 있는 문제들을 5문제씩 제시합니다. 객관식 문제 출력/정답 체크 기능을 구현하였고 문제를 푼 기록들은 로그(quiz_log.tsv)로 저장됩니다. <br>
-수집한 로그를 기반으로 awk를 이용해서 주제별 정답률 확인이 가능합니다. <br>
+- questions/bank.tsv: qid, category, question, choices, answer의 5필드(탭 구분, TSV 권장).
+
+- scripts/: quiz.sh, daily_report.sh, weekly_report.sh에 실행 권한을 부여하여 사용.
+
+- data/: answers.log, sessions.log(JSON Lines)로 원천 로그 보관.
+
+- reports/: YYYY-MM-DD.md, weekly-YYYY-WW.md로 집계 리포트 보관.
+
+- logs/: quiz.cron.log, report.cron.log로 크론 실행 출력 및 오류 누적
 
 ---
 
