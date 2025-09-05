@@ -5,8 +5,11 @@
 
 ## 🖥️ 프로젝트 개요
 Daily IT Quiz는 **TSV 기반 문제은행과 쉘스크립트**를 활용하여 매일 랜덤한 문제들을 출력하고, 정답 여부를 체크하며 풀이 기록을 보관하는 시스템입니다. <br> 학생 및 취업 준비생이 **CS 지식을 반복 학습**하는 데 적합합니다.
+
+---
+
 ### 👥 구성원
-<table align="center">
+<table>
   <tr>
     <td align="center">
        <a href="https://github.com/GodNowoon">
@@ -22,6 +25,8 @@ Daily IT Quiz는 **TSV 기반 문제은행과 쉘스크립트**를 활용하여 
     </td>
   </tr>
 </table>
+
+---
 
 ## 📝 프로젝트 주제 및 기능
 
@@ -58,7 +63,7 @@ Daily-IT-Quiz/
 
 ## 📂 프로젝트 설명 (Project Description)
 
-- questions/bank.tsv: qid, category, question, choices, answer의 5필드(탭 구분, TSV 권장).
+- questions/bank.tsv: qid, category, question, choices, answer의 5필드.
 
 - scripts/: quiz.sh, daily_report.sh, weekly_report.sh에 실행 권한을 부여하여 사용.
 
@@ -70,11 +75,36 @@ Daily-IT-Quiz/
 
 ---
 
+## 🕠 크론 스케줄(자동 실행)
+사용자 crontab에 아래 라인을 추가한다(crontab -e 또는 원라이너).
+
+각 라인 끝의 >> file 2>&1은 표준출력·에러를 로그 파일에 추가 저장하는 리다이렉션이다.
+
+스케줄: 퀴즈 08:30/12:30/17:30/22:30, 일일 리포트 23:50, 주간 리포트(일) 23:55이다.
+
+```
+30 8,12,17,22 * * * $HOME/quiz/scripts/quiz.sh >> $HOME/quiz/logs/quiz.cron.log 2>&1
+50 23 * * *     $HOME/quiz/scripts/daily_report.sh >> $HOME/quiz/logs/report.cron.log 2>&1
+55 23 * * 0     $HOME/quiz/scripts/weekly_report.sh >> $HOME/quiz/logs/report.cron.log 2>&1
+```
+
+---
+
 ## 📷 스크린샷
 
 > 프로젝트 주요 화면을 캡처해서 아래에 첨부
 
 ![screenshot](./itquiz.png)
+- 수동: 터미널에서 quiz.sh 실행 → 대화형 퀴즈 진행 → 로그 축적(answers/sessions) → 필요 시 즉시 daily_report.sh 실행.
+- 자동: cron이 정시에 daily_report.sh/weekly_report.sh 실행 → jq+awk로 로그 집계 → Markdown 리포트 저장 → 실행 출력은 *.cron.log에 누적. 
+<img width="1231" height="140" alt="image" src="https://github.com/user-attachments/assets/8acf9851-5dfa-4ac2-b2fd-cb983bfa8417" />
+<img width="1229" height="146" alt="image" src="https://github.com/user-attachments/assets/1d6b1cb9-9827-417a-9f4d-f6dcf56bfc3f" />
+
+- 퀴즈를 풀 때마다 문항 단위 JSON Lines 이벤트(answers.log)와 세션 단위 요약(sessions.log)을 기록한다.
+<img width="961" height="475" alt="image" src="https://github.com/user-attachments/assets/935c9a67-069a-4d29-8ef9-be27c0b598c1" />
+
+- JSON Lines 로그를 jq로 필터·변환하고 awk로 집계·서식화하여 Markdown으로 출력되며, 크론이 정해진 시각에 스크립트를 호출해 자동 생성
+
 
 ---
 
@@ -97,8 +127,8 @@ Daily-IT-Quiz/
 
 ## 🧠 회고
 
-- **노운**: 우리FIS 아카데미에서 인프라 엔지니어를 꿈꾸는 두 명이 모여서 리눅스(Ubuntu)를 이용하여 CS 역량테스트를 대비하기 위한 프로젝트를 진행했습니다. 이번 하반기 공채 기술면접 대비에 있어서 실제로 자주 쓸 수 있는 유용한 결과물이 만들어져서 기분이 좋습니다.
-- **병길**: 
+- **노운**: 우리FIS 아카데미에서 인프라 엔지니어를 꿈꾸는 두 명이 모여서 리눅스를 이용하여 CS 역량테스트를 대비하기 위한 프로젝트를 진행했습니다. 이번 하반기 공채 기술면접 대비에 있어서 실제로 자주 쓸 수 있는 유용한 결과물이 만들어져서 기분이 좋습니다.
+- **병길**: 텍스트 기반 아키텍처(JSON Lines + jq + awk)로 단순·투명·검증 가능한 데이터 흐름을 만들어 보면서 awk와 crontab에 대한 이해와 리눅스 명령어와 친해질 수 있었고 실제로 앞으로도 제가 배운 것들을 문제로 만들고 tsv파일에 추가해주면서 학습하려는 목적으로 프로젝트를 진행한 것 이기 때문에 다른 프로젝트보다 의욕이 더 생겨서 열심히 하고 재미있게 프로젝트 했습니다. 
 
 ---
 
