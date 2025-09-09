@@ -42,7 +42,7 @@
 
 ### ⚙ 사용 기술 및 도구 (Tech Stack & Tools)
 
-> **IDE / OS**: VS Code / Ubuntu 22.04 / jq 1.7 <br>
+> **IDE / OS**: VS Code / Ubuntu 24.04 / jq 1.7 <br>
 > **가상 환경**: VirtualBox (Linux VM 구동) <br>
 > **버전 관리**: Git / GitHub <br>
 > **협업**: Notion <br>
